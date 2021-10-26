@@ -20,6 +20,15 @@ app.get('/', (req, res) => {
     res.send('Olá Buuuuuuuu')
 })
 
+app.get('/new', (req, res) => {
+    res.send('List')
+})
+
+app.post('/new', (req, res) => {
+    const { nome, idade } = req.body
+    res.send(`Welcome ${nome} idade ${idade}`)
+})
+
 // Inicializar o Servidor na porta Pré Definida
 app.listen(port, () => {
     console.log(`O App está rodando em: http://localhost:${port}`)
