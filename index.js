@@ -10,7 +10,6 @@ app.use(cors()) // Middleware do Cors para liberar requisições
 const port = 3000 // Definir a porta onde será executado o servidor BackEnd
 
 const gamesList = [
-
     {
         gameName: "Super Mario World",
         category: "Platform",
@@ -21,7 +20,6 @@ const gamesList = [
         category: "Action RPG",
         year: 1998
     }
-
 ]
 
 app.get('/', (req, res) => {
@@ -34,20 +32,15 @@ app.get('/:id', (req, res) => {
 })
 
 app.post('/new', (req, res) => {
-
-    const { gameName, category, year } = req.body  
-
+    const { gameName, category, year } = req.body
     let newGame = { 
       gameName: gameName,
       category: category,
       year: year
     }
-
     gamesList.push(newGame)
-
     console.log('Alguém adicionou um filme novo!')
     res.send('Thanks for Your Contribution! 💚')
-
 })
 
 // app.put('/list/:id', (req, res) => {
