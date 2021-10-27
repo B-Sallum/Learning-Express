@@ -1,3 +1,4 @@
+// npm init em um repositório Node (ignoring)
 // Server API
 const express = require('express') //Importar o Express (para inicializar npm i express)
 const cors = require('cors') //Importar o cors (para inicializar npm i cors)
@@ -22,6 +23,24 @@ const gamesList = [
     }
 ]
 
+function pleaseCheck(newGame) {
+    if (newGame.gameName == undefined ||
+        newGame.category == undefined ||
+        newGame.year == undefined ) {
+        return 'Please Add "gameName", "category" and "year" via req.body'
+    } else {
+        gamesList.push(newGame)
+        console.log('Someone just Added a New Game!')
+        return 'Thanks for Your Contribution! 💚'
+    }
+}
+
+// function showList() {
+//     for (i = 0; i <= gamesList.length; i++) {
+//         return gamesList[i]
+//     }
+// }
+
 app.get('/', (req, res) => {
     res.send(gamesList)
 })
@@ -34,13 +53,11 @@ app.get('/:id', (req, res) => {
 app.post('/new', (req, res) => {
     const { gameName, category, year } = req.body
     let newGame = { 
-      gameName: gameName,
-      category: category,
-      year: year
+        gameName: gameName,
+        category: category,
+        year: year
     }
-    gamesList.push(newGame)
-    console.log('Alguém adicionou um filme novo!')
-    res.send('Thanks for Your Contribution! 💚')
+    res.send(pleaseCheck(newGame))
 })
 
 // app.put('/list/:id', (req, res) => {
