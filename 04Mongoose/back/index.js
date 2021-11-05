@@ -12,7 +12,7 @@ app.use(cors());
 Conn();
 
 
-app.use('/', gamesRouter);
+app.use('/games', gamesRouter);
 
 const port = 3000;
 
