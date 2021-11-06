@@ -2,10 +2,12 @@ const express = require('express');
 
 const router = express.Router();
 
+const MusicController = require('./../controllers/music.controller');
 
-router.get('/', (req, res) => {
-  res.send("I'm Grateful")
-})
+const musicController = new MusicController;
+
+
+router.get('/', musicController.getMusic);
 
 
 module.exports = router;
