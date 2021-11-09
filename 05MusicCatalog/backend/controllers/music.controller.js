@@ -52,11 +52,6 @@ class musicController {
     .catch(err => res.status(500).send({ message: `Something goes wrong`}))
   }
 
-
-
-
-
-
 }; // End Class
 
 module.exports = musicController;

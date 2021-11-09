@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="navBack">
+        <h1 class="navTitle">Music Catalog</h1>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="form">
+      <form onsubmit="submitForm(event)">
+        <div class="row">
+          <input type="text" class="formBox" name="name" id="name" placeholder="Insert Music Name" required />
+          <input type="text" class="formBox" name="author" id="author" placeholder="Author" required />
+        </div>
+        <div class="row">
+          <input type="text" class="formBox" name="musicality" id="musicality" placeholder="Musicality" required />
+          <input type="text" class="formBox" name="lyric" id="lyric" placeholder="Lyric..." />
+        </div>
+        <div class="row">
+          <input type="number" class="formBox" name="duration" id="duration" placeholder="Duration" />
+          <input type="url" class="formBox" name="thumb" id="thumb" placeholder="Image URL for Thumb" />
+        </div>
+        <input type="submit" value="Add New Music" class="submitButton" id="submitButton">
+      </form>
+    </section>
+    <section class="musicList" id="musicList">
+    </section>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>

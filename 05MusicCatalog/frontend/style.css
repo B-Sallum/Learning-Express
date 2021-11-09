@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+}
+body
+{
+  background-color: #666666;
+}
+nav
+{
+  font-family: 'Henny Penny', cursive;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+}
+.navBack
+{
+  background-color: #1a140f;
+  color: #de6449;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5em;
+  justify-content: center;
+  gap: 20px;
+  height: 2.5em;
+  text-align: center;
+  text-shadow:
+  0 0 1px #ac3920,
+  0 0 3px #ac3920,
+  0 0 20px #ac3920;
+}
+.form
+{
+  display: grid;
+  grid-template-rows: auto;
+  margin-bottom: 2em;
+  margin-top: 6em;
+  text-align: center;
+}
+.row
+{
+  align-items: center;
+}
+.formBox
+{
+  border-radius: 6px;
+  box-shadow: 0 3px 5px #000;
+  font-family: 'Jura', sans-serif;
+  font-size: 1.3em;
+  margin: 10px;
+  text-align: center;
+  height: 30px;
+  width: 300px;
+}
+.submitButton
+{
+  background-color: #008f47;
+  cursor: pointer;
+}
+.submitButton:hover
+{
+  background-color: #00ca65;
+  transition: 0.5s;
+}
+#submitButton
+{
+  border-radius: 6px;
+  box-shadow: 0 3px 5px #000;
+  font-family: 'Jura', sans-serif;
+  font-size: 1.3em;
+  margin: 10px;
+  text-align: center;
+  height: 30px;
+  width: 300px;
+}
+.musicList
+{
+  display: flex;
+  flex-flow: row wrap;
+  grid-template-rows: auto;
+  justify-content: center;
+  margin: 20px;
+}
+.card-out
+{
+  box-shadow: 0 5px 7px #000;
+  height: 13em;
+  width: 19em;
+  margin: 10px;
+  position: relative;
+}
+.card-in
+{
+  background-image:
+    linear-gradient(
+      black,
+      transparent,
+      transparent,
+      transparent,
+      black
+  );
+  color: ivory;
+  font-family: 'Roboto Condensed', sans-serif;
+  height: 100%;
+  position: relative;
+}
+.name
+{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  margin: 10px;
+}
+.innerRating
+{
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+#rating
+{
+  margin: 0px;
+  width: 40px;
+}
+#havePlay
+{
+  cursor: pointer;
+  height: 33px;
+}
+.innerButtons
+{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.editButton
+{
+  background-color: #FF9000;
+  cursor: pointer;
+}
+.editButton:hover
+{
+  background-color: #FFB85C;
+  transition: 0.5s;
+}
+#editGame
+{
+  font-family: 'Jura', sans-serif;
+  height: 25px;
+  width: 40px;
+}
+#deleteGame
+{
+  background-color: #b33819;
+  height: 25px;
+  width: 30px;
+}
+#deleteGame:hover
+{
+  background-color: #e04e29;
+  transition: 0.5s;
+}
