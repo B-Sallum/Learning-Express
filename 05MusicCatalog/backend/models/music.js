@@ -4,6 +4,8 @@ const musicSchema = new mongoose.Schema({
   name: { type: String, required: true },
   author: { type: String, required: true },
   musicality: { type: String, required: true },
+  lyric: { type: String },
+  duration: { type: Number },
   thumb: { type: String },
   creationDate: { type: Date, default: Date.now }
 });
