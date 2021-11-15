@@ -13,7 +13,7 @@ app.use(cors());
 
 Connect();
 
-app.use('/music', MusicRouter);
+app.use('/', MusicRouter);
 
 const port = 3001;
 

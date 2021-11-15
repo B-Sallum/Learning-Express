@@ -14,10 +14,14 @@ class musicController {
 
   getMusicById = async (req, res) => {
 
-    const response = await musicService.findById(req.params.id);
+    const response = await musicService.findById(req.params.id)
 
-    res.status(200).send(response);
-
+    .then(() => {
+      res.status(200).send(response);
+    })
+    .catch((err) => {
+      res.status(404).send({ message: `There is nothing under this ID` })
+    })
   };
 
   createMusic = async (req, res) => {
@@ -41,7 +45,7 @@ class musicController {
     await musicService.edit(musicId, musicEdit)
     .then(() => res.status(200).send({ message: `Music Edited`}))
     .catch(err => res.status(500).send({ message: `Something goes wrong`}))
-  }
+  };
 
   deleteMusic = async (req, res) => {
 
@@ -50,7 +54,11 @@ class musicController {
     await musicService.delete(deleteMusic)
     .then(() => res.status(200).send({ message: `Music Deleted`}))
     .catch(err => res.status(500).send({ message: `Something goes wrong`}))
-  }
+  };
+
+  ooops = (req, res) => {
+    res.status(404).send('404 - Sorry, there is nothing here!');
+  };
 
 }; // End Class
 
